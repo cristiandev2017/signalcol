@@ -1,0 +1,248 @@
+:root {
+  --primary: #015ae9;
+  --black: #262626;
+  --white: #FFF;
+  --fuente-principal: 'Outfit', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+[class*="contenedor"],
+main {
+  width: min(95%, 120rem);
+  margin: 3rem auto;
+}
+
+[class*="heading"] {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 5rem 0;
+}
+
+/*** Header **/
+.header {
+  background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / .7)), url(/img/header.jpg);
+  padding: 6rem 0;
+  background-size: cover;
+  background-position: center center;
+}
+.textcenter{
+  text-align: center;
+  font-size: 3rem;
+}
+.header .logo {
+  width: 35rem;
+}
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .barra {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+}
+.header .navegacion {
+  display: flex;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .header .navegacion {
+      margin-top: 0;
+  }
+}
+.header .navegacion a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.4rem;
+  padding: .5rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+.header .navegacion a:hover,
+.header .active {
+  background-color: var(--primary);
+}
+
+/** Footer **/
+.footer {
+  background-color: var(--black);
+  padding: 5rem 0;
+  margin-top: 5rem;
+}
+
+@media (min-width:768px) {
+  .footer .contenido {
+      display: flex;
+      justify-content: space-between;
+  }
+}
+.footer .navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .footer .navegacion {
+      flex-direction: row;
+      
+  }
+}
+.footer .navegacion a,
+.footer .copyright {
+  color: var(--white);
+  font-size: 2.2rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer .copyright {
+  text-align: center;
+ 
+}
+
+.error,
+.error-enlace {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+.error-enlace {
+  display: block;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.enlace {
+  margin-top: 2rem;
+  display: block;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+.enlace:hover {
+  background-color: var(--primary);
+}
+
+.letras-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.letra-item {
+  margin: 0 10px;
+  max-width: 100px;
+  box-sizing: border-box;
+}
+
+.letra-item input {
+  width: 50px;
+  padding: 8px; /* Añade espacio interno al input */
+  border: none; /* Elimina todos los bordes */
+  border-bottom: 2px solid #333; /* Añade un borde solo en la parte inferior */
+  outline: none; /* Elimina el contorno predeterminado del input al hacer clic */
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.letra-item img {
+  max-width: 100%;
+}
+
+button {
+  margin-top: 10px; /* Añade espacio entre los inputs y el botón */
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+}
+
+button:hover {
+  background-color: #2980b9; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+.submenu {
+  position: relative;
+  display: inline-block;
+  color: var(--white); 
+  text-transform: uppercase;
+  font-size: 1.65rem;
+  font-weight: 700;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+
+
+.submenu:hover {
+  background-color: var(--primary);
+}
+
+
+.submenu-toggle {
+  cursor: pointer;
+}
+
+.submenu-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.submenu-content a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu-content a:hover {
+  background-color: #ddd;
+}
+
+.submenu:hover .submenu-content {
+  display: block;
+}
